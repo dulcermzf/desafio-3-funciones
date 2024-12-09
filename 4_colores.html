@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4 colores</title>
+    <style>
+      .contenedor-principal {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .cuadrado {
+        width: 200px;
+        height: 200px;
+      }
+
+      .azul {
+        background-color: blue;
+      }
+
+      .rojo {
+        background-color: red;
+      }
+
+      .verde {
+        background-color: green;
+      }
+
+      .amarillo {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="contenedor-principal">
+      <div class="cuadrado azul"></div>
+      <div class="cuadrado rojo"></div>
+      <div class="cuadrado verde"></div>
+      <div class="cuadrado amarillo"></div>
+    </main>
+    <script>
+      const cuadrados = document.querySelectorAll(".cuadrado");
+
+      function pintar(cuadrado, color) {
+        cuadrado.style.backgroundColor = color;
+      }
+
+      cuadrados.forEach((cuadrado) => {
+        cuadrado.addEventListener("click", () => {
+          pintar(cuadrado, "black");
+        });
+      });
+    </script>
+  </body>
+</html>
